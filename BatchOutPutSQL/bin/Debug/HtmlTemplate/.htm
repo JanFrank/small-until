@@ -1,0 +1,41 @@
+<html><head>    <title></title>    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />            <script src="../bootstrap-3.3.7-dist/jquery.min.js"></script>    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />    </head><body>    <h1></h1>    <div class="col-md-12">        <h3 id="1-">1) 请求地址</h3>        <div class="well">            <p><a href="http://192.168.2.201:8001/hostarea/hostSceneConnectInfo">http://192.168.2.201:8001/hostarea/hostSceneConnectInfo</a></p>        </div>               <h3 id="2-http-post">2) 调用方式：HTTP Post</h3>        <h3 id="3-">3) 接口描述：</h3>        <ul>            <li> </li>        </ul>        <h3 id="4-">4) 请求Json:</h3>        <pre><code>{
+    "sessionID": "1cabdffff856b5a3156d7b15f32b4b42",
+    "HostID": "8000003800233135510f35353833",
+    "SceneCode": "2017031113550355080923"
+}</code></pre>        <h3 id="post-">5)请求参数:</h3>        <table class="table table-bordered table-hover">            <thead>                <tr>                    <th>字段名称</th>                    <th>字段说明</th>                    <th>类型</th>                    <th>必填</th>                    <th>备注</th>                </tr>            </thead>            <tbody>                <tr><td>sessionID</td><td>sessionID</td><td>String</td><td>Y</td><td><input type='text' /></td></tr><tr><td>HostID</td><td>主机ID</td><td>String</td><td>Y</td><td><input type='text' /></td></tr><tr><td>SceneCode</td><td>情景编号</td><td>String</td><td>Y</td><td><input type='text' /></td></tr>            </tbody>        </table>        <h3 id="5-">5) 请求返回结果:</h3>        <pre><code>{
+    "errcode": "0",
+    "errmsg": "",
+    "LinkList": [
+        {
+            "AreaCode": "",
+            "AreaName": "",
+            "LinkCode": "2017031118410944119729",
+            "LinkName": "报警",
+            "ImgCode": "1",
+            "parentareacode": "",
+            "parentareaname": "",
+            "ExecState": "close"
+        },
+        {
+            "AreaCode": "",
+            "AreaName": "",
+            "LinkCode": "2017031308450541694954",
+            "LinkName": "789",
+            "ImgCode": "3",
+            "parentareacode": "",
+            "parentareaname": "",
+            "ExecState": "open"
+        },
+        {
+            "AreaCode": "",
+            "AreaName": "",
+            "LinkCode": "2017031308401341775310",
+            "LinkName": "244",
+            "ImgCode": "3",
+            "parentareacode": "",
+            "parentareaname": "",
+            "ExecState": "open"
+        }
+    ],
+    "TaskList": []
+}</code></pre>        <h3 id="6-">6) 请求返回结果参数说明:</h3>        <table class="table  table-bordered table-hover">            <thead>                <tr>                    <th>字段名称</th>                    <th>字段说明</th>                    <th>类型</th>                    <th>备注</th>                </tr>            </thead>            <tbody>                <tr><td>errcode</td><td>错误编号</td><td>String</td><td><input type='text' /></td></tr><tr><td>errmsg</td><td>错误提示</td><td>String</td><td><input type='text' /></td></tr><tr><td>LinkList</td><td>联动列表</td><td>Array</td><td><input type='text' /></td></tr><tr><td>AreaCode</td><td>区域编号</td><td>string</td><td><input type='text' /></td></tr><tr><td>AreaName</td><td>区域名称</td><td>string</td><td><input type='text' /></td></tr><tr><td>LinkCode</td><td>联动编号</td><td>string</td><td><input type='text' /></td></tr><tr><td>LinkName</td><td>联动名称</td><td>string</td><td><input type='text' /></td></tr><tr><td>ImgCode</td><td>图片编号</td><td>string</td><td><input type='text' /></td></tr><tr><td>parentareacode</td><td>父区域编号</td><td>string</td><td><input type='text' /></td></tr><tr><td>parentareaname</td><td>父区域名称</td><td>string</td><td><input type='text' /></td></tr><tr><td>ExecState</td><td>状态</td><td>string</td><td><input type='text' /></td></tr><tr><td>TaskList</td><td>定时列表</td><td>Array</td><td><input type='text' /></td></tr>            </tbody>        </table>    </div></body></html>

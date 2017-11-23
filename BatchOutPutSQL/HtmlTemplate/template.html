@@ -1,0 +1,105 @@
+﻿<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    
+    
+    <script src="../bootstrap-3.3.7-dist/jquery.min.js"></script>
+    <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--<script src="./zeroclipboard.js"></script>-->
+
+</head>
+<body>
+
+    <h1>$htmlformat[0]</h1>
+
+
+    <div class="col-md-12">
+
+        <h3 id="1-">1) 请求地址</h3>
+        <div class="well">
+            <p><a href="$htmlformat[1]">$htmlformat[1]</a></p>
+        </div>
+       
+        <h3 id="2-http-post">2) 调用方式：HTTP $htmlformat[2]</h3>
+        <h3 id="3-">3) 接口描述：</h3>
+
+        <ul>
+            <li> $htmlformat[3]</li>
+        </ul>
+        <h3 id="4-">4) 请求Json:</h3>
+        <pre><code>$htmlformat[4]</code></pre>
+
+
+        <h3 id="post-">5)请求参数:</h3>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>字段名称</th>
+                    <th>字段说明</th>
+                    <th>类型</th>
+                    <th>必填</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                $htmlformat[5]
+            </tbody>
+        </table>
+
+
+        <h3 id="6-">6) 请求返回结果:</h3>
+        <input type="button" value="隐藏/显示" onclick="HidDiv('Div_ReturnJson')" />
+        <!--<input type="button" value="复制返回的JSON" id="TestBtn" onclick="CopyDivInfo('Div_ReturnJson')" />-->
+        <div style="background-color:#f5f5f5" id="Div_ReturnJson" class="collapse in" data-toggle="collapse">
+            <pre><code>$htmlformat[6]</code></pre>
+        </div>
+        
+
+
+
+        <h3 id="7-">7) 请求返回结果参数说明:</h3>
+        <table class="table  table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>字段名称</th>
+                    <th>字段说明</th>
+                    <th>类型</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                $htmlformat[7]
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+    <script>
+        function HidDiv(divId) {
+            $("#" + divId).collapse('toggle');
+        }
+
+        
+
+        //function CopyDivInfo(devId) {
+        //    console.log($("#" + devId).length);
+        //    var TempText = $("#" + devId).closest('code').text();
+            
+        //    //window.clipboardData.setData("Text", clipBoardContent);
+        //    //window.clipboardData.setData('text', TempText);
+
+
+        //    $("#" + devId).closest('code').select();
+        //    js = $("#" + devId).closest('code').createTextRange();
+        //    js.execCommand("Copy")
+        //}
+        //复制功能没做完。
+    </script>
+
+</body>
+</html>

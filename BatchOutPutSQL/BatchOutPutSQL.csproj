@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB8186B2-20D0-44F9-A1EA-B7574E4A395F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BatchOutPutSQL</RootNamespace>
+    <AssemblyName>BatchOutPutSQL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>7484ea7a</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tool_box.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.2.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.2.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.105.0\lib\net45\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.105.0\lib\net45\System.Data.SQLite.EF6.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.105.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.105.0\lib\net45\System.Data.SQLite.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseFrm\MyBaseChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ChangeToModel.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\ExcelHelper.cs" />
+    <Compile Include="Common\IOHelper.cs" />
+    <Compile Include="Common\NPOIHelper.cs" />
+    <Compile Include="Common\SecureHelper.cs" />
+    <Compile Include="Common\StringHelper.cs" />
+    <Compile Include="Common\TypeHelper.cs" />
+    <Compile Include="Common\ValidateHelper.cs" />
+    <Compile Include="Common\WebHelper.cs" />
+    <Compile Include="BatchOutPutSqlFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BatchOutPutSqlFrm.Designer.cs">
+      <DependentUpon>BatchOutPutSqlFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\XmlHelper.cs" />
+    <Compile Include="Common\SQLiteHelper.cs" />
+    <Compile Include="GetFileMD5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetFileMD5.Designer.cs">
+      <DependentUpon>GetFileMD5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\FunHelper.cs" />
+    <Compile Include="JsonFormatFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JsonFormatFrm.Designer.cs">
+      <DependentUpon>JsonFormatFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageMyDbsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMyDbsFrm.Designer.cs">
+      <DependentUpon>ManageMyDbsFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostGetHelperFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostGetHelperFrm.Designer.cs">
+      <DependentUpon>PostGetHelperFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubStringHelperFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubStringHelperFrm.Designer.cs">
+      <DependentUpon>SubStringHelperFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestFrm.Designer.cs">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BatchOutPutSqlFrm.resx">
+      <DependentUpon>BatchOutPutSqlFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GetFileMD5.resx">
+      <DependentUpon>GetFileMD5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JsonFormatFrm.resx">
+      <DependentUpon>JsonFormatFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageMyDbsFrm.resx">
+      <DependentUpon>ManageMyDbsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostGetHelperFrm.resx">
+      <DependentUpon>PostGetHelperFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SubStringHelperFrm.resx">
+      <DependentUpon>SubStringHelperFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFrm.resx">
+      <DependentUpon>TestFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bootstrap-3.3.7-dist\css\bootstrap-theme.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\css\bootstrap.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\css\bootstrap.min.css.map">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="DBS\MyDicDb.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="1189841.png" />
+    <Content Include="bootstrap-3.3.7-dist\css\bootstrap-theme.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\css\bootstrap-theme.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\css\bootstrap.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\css\bootstrap.min.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\js\bootstrap.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\js\bootstrap.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bootstrap-3.3.7-dist\js\npm.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HtmlTemplate\template.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HtmlTemplate\ZeroClipboard.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HtmlTemplate\ZeroClipboard.swf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tool_box.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.0\build\net45\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net45\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net45\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.105.0\build\net45\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
